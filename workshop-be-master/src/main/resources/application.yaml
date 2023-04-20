@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5234/event_edu
+    username: postgres
+    password: 322001
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: true
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+            lob:
+                non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+        ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: msonlineservicesgreenwich@gmail.com
+    password: grtzviytxfcodvuw
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+
+server:
+  port: 4001
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui
+    disable-swagger-default-url: true
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} [EVENT-SERVICE] %m%n%wEx"
+
+
+JWT_SECRET: PeakyBlindersSecretKey
+JWT_EXPIRATION: 172800000
+JWT_REFRESH_EXPIRATION: 604800000
+URL_VERIFY_LOGIN: http://localhost:3000/auth/verify-login
+URL_SWAGGER: http://localhost:5000/

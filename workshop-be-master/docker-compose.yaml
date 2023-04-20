@@ -1,0 +1,8 @@
+version: '3'
+services:
+  class-group:
+    image: lhquan244/event-be:latest
+    ports:
+      - "5021:5000"
+    container_name: event-be
+
