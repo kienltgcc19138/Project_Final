@@ -1,7 +1,5 @@
 package vn.kien.event.eventbe.services;
 
-import com.cloudinary.Cloudinary;
-import com.cloudinary.utils.ObjectUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -10,11 +8,9 @@ import vn.kien.event.eventbe.entity.FileData;
 import vn.kien.event.eventbe.repository.IFileDataRepository;
 import vn.kien.event.eventbe.response.FileDataResponse;
 import vn.kien.event.eventbe.response.sub.CloudinaryResponse;
-import vn.kien.event.eventbe.utils.CloudinaryUtils;
 
 import java.io.IOException;
 import java.util.Date;
-import java.util.Map;
 
 
 @Service

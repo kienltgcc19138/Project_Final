@@ -81,7 +81,7 @@ export default function RecommendList() {
           },
         ],
       };
-      console.log("data",data);
+      console.log("data", data);
       const res = await fetchRecommendService(data);
       switch (res.status) {
         case 200:
@@ -147,6 +147,7 @@ export default function RecommendList() {
           size="large"
           onSearch={onSearch}
         />
+
         <div
           onClick={() => setModal(true)}
           className={` ${

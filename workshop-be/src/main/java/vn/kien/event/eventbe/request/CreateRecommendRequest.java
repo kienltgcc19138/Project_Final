@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 /**
  * Le-Hong-Quan
@@ -13,7 +14,9 @@ import javax.validation.constraints.NotBlank;
 @Getter
 @Setter
 public class CreateRecommendRequest {
+    @NotEmpty(message = "Name is required")
     private String name;
+    @NotEmpty(message = "Description is required")
     private String description;
 
 }

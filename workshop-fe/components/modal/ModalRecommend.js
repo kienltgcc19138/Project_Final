@@ -16,21 +16,26 @@ const ModalRecommend = ({ show, handleClose, onSearch }) => {
   const [userId, setUserId] = useState(Cookies.get("userId"));
 
   const handleRecommend = async () => {
-    let data = {
-      name: name,
-      description: description,
-    };
-    const res = await recommendService(data);
-    switch (res.status) {
-      case 200:
-        toast.success("Success");
-        setName("");
-        setDescription("");
-        handleClose();
-        onSearch();
-        break;
-      default:
-        break;
+    try{
+      let data = {
+        name: name,
+        description: description,
+      };
+      const res = await recommendService(data);
+      switch (res.status) {
+        case 200:
+          toast.success("Success");
+          setName("");
+          setDescription("");
+          handleClose();
+          onSearch();
+          break;
+        default:
+          break;
+      }
+    }catch(error){
+      console.log("err" + error.response.data);
+      toast.error(error?.response.data.message);
     }
   };
 

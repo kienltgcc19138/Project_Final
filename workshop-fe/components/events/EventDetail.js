@@ -359,7 +359,7 @@ const EventDetail = ({ detail, userRole }) => {
                       )}
                     </>
                   )}
-                  {Cookies.get("role") !== "ROLE_USER" && (
+                  {Cookies.get("role") !== "" && (
                     <Table
                       columns={columns}
                       dataSource={data}

@@ -99,7 +99,7 @@ const EventItem = ({ handleRegEvent, data, refresh, check }) => {
             <span>{data.score}</span>
           </div>
           <div className="flex justify-between mt-4 items-center  text-base flex-wrap">
-            {Cookies.get("role") === "ROLE_USER" && (
+            {Cookies.get("role") === "ROLE_USER" && data.status == "UPCOMING"&& (
               <button
                 disabled={isRegister}
                 onClick={() => {

@@ -157,7 +157,7 @@ export default function Profile() {
       }
     } catch (error) {
       console.log("err" + error);
-      toast.error(error?.response?.data.message[0]);
+      toast.error(error?.response?.data.message);
     }
   };
   const fetchDataCourse = async (data) => {

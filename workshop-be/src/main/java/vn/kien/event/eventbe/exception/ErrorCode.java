@@ -1,10 +1,6 @@
 package vn.kien.event.eventbe.exception;
 
-/**
- * Le-Hong-Quan
- * Date: 19/02/2023
- * Time: 11:51
- */
+
 public class ErrorCode {
     public static final String ACCOUNT_NOT_FOUND = "ACCOUNT_NOT_FOUND";
     public static final String ACCOUNT_EXISTED = "ACCOUNT_EXISTED";

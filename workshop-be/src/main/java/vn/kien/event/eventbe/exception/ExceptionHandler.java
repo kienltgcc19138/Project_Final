@@ -114,7 +114,7 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
                                                                   HttpHeaders headers, HttpStatus status, WebRequest request) {
-        return ResponseEntity.badRequest().body(new MessageResponse("Lỗi: Dữ liệu không hợp lệ hoặc sai cú pháp."));
+        return ResponseEntity.badRequest().body(new MessageResponse("Error: Invalid data or syntax error"));
     }
 
     @Override
